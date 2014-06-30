@@ -6,7 +6,7 @@ class Key_model extends CI_Model
     /**
      * __construct
      *
-     * @author  Chris Kacerguis <ckacerguis@apple.com>
+     * @author  Chris Kacerguis
      * @return  void
      */ 
     public function __construct() 
@@ -14,6 +14,15 @@ class Key_model extends CI_Model
         parent::__construct();
     }
 
+    /**
+     * [generate description]
+     *
+     * @author Chris Kacerguiss
+     * @param  [type]  $length   [description]
+     * @param  string  $set      [description]
+     * @param  boolean $function [description]
+     * @return [type]            [description]
+     */
     public function generate($length, $set = 'chars', $function = false)
     {
         $alphanum   = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -30,10 +39,9 @@ class Key_model extends CI_Model
         }
 
         return base64_encode($str);
-
     }
 
 }
 
 /* End of file key_model.php */
-/* Location: ./application/models/key_model.php.php */
+/* Location: ./application/models/key_model.php */

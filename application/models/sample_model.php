@@ -6,7 +6,7 @@ class Sample_model extends CI_Model
     /**
      * __construct
      *
-     * @author  Chris Kacerguis <ckacerguis@apple.com>
+     * @author  Chris Kacerguis
      * @return  void
      */ 
     public function __construct() 
