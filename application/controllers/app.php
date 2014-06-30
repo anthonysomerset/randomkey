@@ -2,16 +2,21 @@
 
 class App extends CI_Controller 
 {
+    /**
+     * [__construct description]
+     */
     public function __construct()
     {
         parent::__construct();
         $this->load->model('key_model', 'key');
     }
 
+    /**
+     * [index description]
+     * @return [type] [description]
+     */
     public function index()
     {
-        
-
         $data['decent1'] = $this->key->generate(10, 'alphanum');
         $data['decent2'] = $this->key->generate(10, 'alphanum');
         $data['decent3'] = $this->key->generate(10, 'alphanum');
@@ -53,6 +58,10 @@ class App extends CI_Controller
         $this->load->view('keys', $data);
     }
 
+    /**
+     * [decent description]
+     * @return [type] [description]
+     */
     public function decent()
     {
         echo $this->key->generate(10, 'alphanum');
@@ -102,6 +111,12 @@ class App extends CI_Controller
     {
         echo $this->key->generate(29, 'alphanum', 'strtoupper');
     }    
+
+    public function ip_address()
+    {
+        echo $this->input->ip_address();
+    }    
+
 }
 
 /* End of file app.php */
